@@ -115,4 +115,35 @@ Implement PID Control: Use the angle data from this sensor as the input for a PI
 
 Create Feedback Loop: The PID controller's output would drive the motors to counteract the tilt, automatically returning the system to a perfect level. This creates the "robust, self-correcting mechanism" described in the project goal.
 
+
 Enhanced using Google Gemini 2.5 Pro
+
+
+References:
+
+Kumbar, K. A., & Guruprasad K. N. (2020). “Arduino Inclinometer using MPU6050”. International Research Journal of Engineering & Technology (IRJET), Vol 07, Special Issue. 
+IRJET
+
+“Arduino & MPU6050 Based Digital Spirit Level.” (2019). Instructables article by phenoxyethanol. 
+Instructables
+
+“Interfacing An MPU6050 (Gyroscope + Accelerometer) Sensor Module To An Arduino Uno.” Woolsey Workshop tutorial, 2018. 
+woolseyworkshop.com
+
+“How to Interface MPU6050 with the Arduino.” Robu blog tutorial, 2021. 
+Robu.in
+
+“On-site scale factor linearity calibration of MEMS triaxial gyroscopes.” Li, Y. et al. (2024). arXiv pre-print. 
+arXiv
+
+“Noise modelling and analysis of an IMU-based attitude sensor: improvement of performance by filtering and sensor fusion.” Nirmal, K. et al. (2016). arXiv pre-print. 
+arXiv
+
+“FreeIMU: An Open Hardware Framework for Orientation and Motion Sensing.” Varesano, F. (2013). arXiv pre-print. 
+arXiv
+
+“Development of gyroscopic angle measuring sensor by using Arduino.” (2022). ResearchGate project document. 
+ResearchGate
+
+“Report of Project MPU-6050 – Using an MPU-6050 accelerometer sensor to measure rotational angles in space.” (2021). Hoàng Ngọc Quý & Vũ Hoàng Quý Lân. 
+scribd.com

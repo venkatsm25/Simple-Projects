@@ -1,13 +1,23 @@
 /**
  * AI Tic-Tac-Toe Game in C
- *Structured , improved and enhanced using Gemini 2.5 Pro
- * This program implements a Tic-Tac-Toe game where the human player
- * plays against an unbeatable AI.
+ * ---------------------------------------------------------
+ * Structured, improved, and enhanced using Gemini 2.5 Pro
  *
- * The AI uses the minimax algorithm to determine the best possible move.
+ * Description:
+ * This program implements a Tic-Tac-Toe game where the human
+ * player ('X') plays against an unbeatable AI ('O').
  *
- * Player = 'X'
- * AI = 'O'
+ * The AI uses the Minimax algorithm — a classic AI decision-making
+ * method — to determine the optimal move by simulating all possible
+ * game outcomes.
+ *
+ * Features:
+ * - Structured modular design
+ * - Recursive minimax decision logic
+ * - Clean board visualization
+ * - Input validation for human moves
+ *
+ * ---------------------------------------------------------
  */
 
 #include <stdio.h>
@@ -53,8 +63,8 @@ void printBoard() {
 }
 
 /**
- * @brief Checks if there are any moves left on the board.
- * @return true if the board is full, false otherwise.
+ * @brief Checks if the board is completely filled.
+ * @return true if no empty cells remain, false otherwise.
  */
 bool isBoardFull() {
     for (int i = 0; i < 3; i++) {
@@ -68,95 +78,69 @@ bool isBoardFull() {
 }
 
 /**
- * @brief Checks if a specific player has won the game.
- * @param player The player ('X' or 'O') to check for a win.
- * @return true if the player has won, false otherwise.
+ * @brief Checks whether a given player ('X' or 'O') has won.
+ * @param player - The symbol of the player to check.
+ * @return true if the player has a winning line, false otherwise.
  */
 bool checkWinner(char player) {
-    // Check rows
+    // Rows
     for (int i = 0; i < 3; i++) {
-        if (board[i][0] == player && board[i][1] == player && board[i][2] == player) {
+        if (board[i][0] == player && board[i][1] == player && board[i][2] == player)
             return true;
-        }
     }
-    // Check columns
+    // Columns
     for (int i = 0; i < 3; i++) {
-        if (board[0][i] == player && board[1][i] == player && board[2][i] == player) {
+        if (board[0][i] == player && board[1][i] == player && board[2][i] == player)
             return true;
-        }
     }
-    // Check diagonals
-    if (board[0][0] == player && board[1][1] == player && board[2][2] == player) {
+    // Diagonals
+    if (board[0][0] == player && board[1][1] == player && board[2][2] == player)
         return true;
-    }
-    if (board[0][2] == player && board[1][1] == player && board[2][0] == player) {
+    if (board[0][2] == player && board[1][1] == player && board[2][0] == player)
         return true;
-    }
+
     return false;
 }
 
 /**
- * @brief The core minimax algorithm.
- * It considers all possible ways the game can go and returns a "score"
- * for the current board state.
+ * @brief Minimax algorithm implementation.
+ * Evaluates all possible game states recursively to determine
+ * the optimal score for AI ('O') or Player ('X').
  *
- * @param isMaximizingPlayer true if it's the AI's turn (maximizing score),
- * false if it's the Player's turn (minimizing score).
- * @return A score: +10 for AI win, -10 for Player win, 0 for draw.
+ * @param isMaximizingPlayer - true if AI's turn, false if Player's turn.
+ * @return +10 for AI win, -10 for Player win, 0 for draw.
  */
 int minimax(bool isMaximizingPlayer) {
-    // Check for terminal states (win/lose/draw)
-    if (checkWinner(PLAYER_O)) {
-        return 10; // AI wins
-    }
-    if (checkWinner(PLAYER_X)) {
-        return -10; // Player wins
-    }
-    if (isBoardFull()) {
-        return 0; // Draw
-    }
+    // Terminal conditions
+    if (checkWinner(PLAYER_O)) return 10;
+    if (checkWinner(PLAYER_X)) return -10;
+    if (isBoardFull()) return 0;
 
-    // AI's turn (Maximizer)
+    // Maximizer (AI's move)
     if (isMaximizingPlayer) {
-        int bestScore = INT_MIN; // Initialize with a very low score
-
-        // Iterate through all empty cells
+        int bestScore = INT_MIN;
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (board[i][j] == EMPTY_SPACE) {
-                    // Make the move
                     board[i][j] = PLAYER_O;
-                    // Recursively call minimax for the opponent's turn
-                    int score = minimax(false); // Now it's the minimizer's (Player's) turn
-                    // Undo the move
+                    int score = minimax(false);
                     board[i][j] = EMPTY_SPACE;
-                    // Find the maximum score
-                    if (score > bestScore) {
-                        bestScore = score;
-                    }
+                    if (score > bestScore) bestScore = score;
                 }
             }
         }
         return bestScore;
     }
-    // Player's turn (Minimizer)
+    // Minimizer (Player's move)
     else {
-        int bestScore = INT_MAX; // Initialize with a very high score
-
-        // Iterate through all empty cells
+        int bestScore = INT_MAX;
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (board[i][j] == EMPTY_SPACE) {
-                    // Make the move
                     board[i][j] = PLAYER_X;
-                    // Recursively call minimax for the opponent's turn
-                    int score = minimax(true); // Now it's the maximizer's (AI's) turn
-                    // Undo the move
+                    int score = minimax(true);
                     board[i][j] = EMPTY_SPACE;
-                    // Find the minimum score
-                    if (score < bestScore) {
-                        bestScore = score;
-                    }
+                    if (score < bestScore) bestScore = score;
                 }
             }
         }
@@ -165,33 +149,20 @@ int minimax(bool isMaximizingPlayer) {
 }
 
 /**
- * @brief Finds the best possible move for the AI.
- * It iterates through all possible moves, calls minimax() for each,
- * and chooses the move that gives the highest (best) score.
- *
- * @return A Move struct with the optimal row and column.
+ * @brief Determines the best possible move for the AI using minimax.
+ * @return A struct Move containing the best (row, col).
  */
 struct Move findBestMove() {
     int bestScore = INT_MIN;
-    struct Move bestMove;
-    bestMove.row = -1;
-    bestMove.col = -1;
+    struct Move bestMove = {-1, -1};
 
-    // Iterate through all empty cells
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
             if (board[i][j] == EMPTY_SPACE) {
-                // Make the move
                 board[i][j] = PLAYER_O;
-                
-                // Calculate the score for this move
-                // We call minimax for the minimizing player (Human)
-                int moveScore = minimax(false); 
-
-                // Undo the move
+                int moveScore = minimax(false);
                 board[i][j] = EMPTY_SPACE;
 
-                // If this move's score is better than the best score found so far
                 if (moveScore > bestScore) {
                     bestScore = moveScore;
                     bestMove.row = i;
@@ -204,7 +175,7 @@ struct Move findBestMove() {
 }
 
 /**
- * @brief Gets and validates the human player's move.
+ * @brief Gets the human player's move and validates it.
  */
 void getPlayerMove() {
     int row, col;
@@ -216,53 +187,68 @@ void getPlayerMove() {
             board[row][col] = PLAYER_X;
             break;
         } else {
-            printf("Invalid move. The cell is already taken or out of bounds.\n");
+            printf("Invalid move. Please try again.\n");
         }
     }
 }
 
 /**
- * @brief The main game loop.
+ * @brief The main game loop controlling the turns and outcomes.
  */
 int main() {
-    printf("Welcome to AI Tic-Tac-Toe!\n");
-    printf("You are 'X' and the AI is 'O'.\n");
-    
+    printf("=====================================\n");
+    printf("      AI Tic-Tac-Toe in C (Minimax)\n");
+    printf("=====================================\n");
+    printf("You are 'X' | AI is 'O'\n\n");
+
     initializeBoard();
     printBoard();
 
     while (true) {
-        // --- Player's Turn ---
+        // Player's turn
         getPlayerMove();
         printBoard();
-
         if (checkWinner(PLAYER_X)) {
-            printf("Congratulations! You win!\n");
+            printf("🎉 Congratulations! You win!\n");
             break;
         }
         if (isBoardFull()) {
-            printf("It's a draw!\n");
+            printf("🤝 It's a draw!\n");
             break;
         }
 
-        // --- AI's Turn ---
+        // AI's turn
         printf("AI is thinking...\n");
         struct Move aiMove = findBestMove();
         board[aiMove.row][aiMove.col] = PLAYER_O;
-        
+
         printf("AI played at (%d, %d):\n", aiMove.row, aiMove.col);
         printBoard();
 
         if (checkWinner(PLAYER_O)) {
-            printf("AI wins! Better luck next time.\n");
+            printf("💻 AI wins! Better luck next time.\n");
             break;
         }
         if (isBoardFull()) {
-            printf("It's a draw!\n");
+            printf("🤝 It's a draw!\n");
             break;
         }
     }
 
     return 0;
-
 }
+
+/* -------------------------------------------------------------------
+   📚 References & Acknowledgements
+   -------------------------------------------------------------------
+   1. Donald E. Knuth, "The Art of Computer Programming, Vol. 1–4."
+      (For recursive algorithmic structure principles)
+   2. S. Russell, P. Norvig, "Artificial Intelligence: A Modern Approach"
+      (3rd Edition, Pearson, 2016)
+   3. Tic-Tac-Toe Minimax concept explained in:
+      GeeksforGeeks: https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-1-introduction/
+   4. Stack Overflow & Cprogramming.com community references for
+      practical C code structuring and debugging approaches.
+   5. Enhancements and structured documentation support by
+      Gemini 2.5 Pro & ChatGPT (OpenAI GPT-5).
+   ------------------------------------------------------------------- */

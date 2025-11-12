@@ -58,4 +58,32 @@ While the current system is fully functional, it has a strong foundation for fut
 * **Potential Applications:** The device could be adapted for use in rescue missions, defense systems, or as a communication aid for speech-impaired individuals.
 
 ---
+
 > **Note:** The programming code and content for this project were enhanced and refined using Google Gemini 2.5 Pro.
+
+
+
+References:
+Choudhury, R.R. “Morse Code-Enabled Speech Recognition for Individuals with Visual and Hearing Impairments.” arXiv preprint arXiv:2407.14525 (2024). 
+arXiv
+
+“Multi-Modal Morse Code Translator: Communicate via Sound, Gesture & Eye-Blink.” Vasudha Manvith. (2024). 
+Semantic Scholar
+
+Goswami, M., Hussain, A., Kothakonda, S., Dubey, R., Vargantwar, L., Khanorkar, M., Prasad, A. “Gesture Language Translator using Morse Code.” i-manager’s Journal on Computer Science, Vol 12(3), 59-65 (2024). 
+i-manager publications
+
+Pinjarkar, U., Kadam, A., Kasbe, K., Popalghat, S. “Morse Code Translator to Convert Text to Morse Code and Morse to Text.” Journal of Web Engineering & Technology, 11(01), 6-11 (2024). 
+STM Journals
+
+Akare, U.P., Bhure, K., Sonkusre, A., Ganorkar, A., Barapatre, M., Roychowdhury, P. “Morse Code Detector Using Machine Learning.” International Journal of Advanced Research in Computer and Communication Engineering, Vol 13 Issue 4, April 2024. 
+Peer-reviewed Journal
+
+Nicolaou, N., Georgiou, J. “Towards a Morse Code-Based Non-invasive Thought-to-Speech Converter.” In: Biomedical Engineering Systems and Technologies (BIOSTEC 2008). CCIS vol 25, pp 123-135. Springer, 2008. 
+SpringerLink
+
+“Morse Code Converter Using Arduino for Real-Time Applications.” Swanirman Consultancy, March 2025. 
+swanirmanconsultancy.in
+
+“Morse Code Translator.” JETIRGX06066, July 2025, Volume 12, Issue 7. Naik Prajwal, Preetham, Vaibhav K.V., Chethan Raj, Aravind Naik. 
+Jetir

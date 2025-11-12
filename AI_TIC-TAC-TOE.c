@@ -1,6 +1,6 @@
 /**
  * AI Tic-Tac-Toe Game in C
- *
+ *Structured , improved and enhanced using Gemini 2.5 Pro
  * This program implements a Tic-Tac-Toe game where the human player
  * plays against an unbeatable AI.
  *
@@ -264,4 +264,5 @@ int main() {
     }
 
     return 0;
+
 }

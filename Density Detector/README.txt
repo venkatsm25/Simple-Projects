@@ -169,6 +169,12 @@ A. Kumar, M. Singh, “Automatic Traffic Density Estimation and Signal Timing Us
 N. P. Kothari et al., “Smart Traffic Control System Using IoT,” IEEE Conference on Recent Advances in Electronics and Communication Technology (ICRAECT), 2017.
 — Explores combining Arduino/ESP modules with cloud connectivity for traffic monitoring.
 
+P. S. Hiremath, S. N. Shridhar, “Crowd Density Estimation using Image Processing Techniques,” IEEE International Conference on Advanced Video and Signal-Based Surveillance (AVSS), 2018.
+— Discusses visual methods for crowd density classification—supports your object-count threshold method.
+
+M. M. Zaki, A. S. Mosleh, “IoT-based Smart Crowd Management System using Computer Vision and Sensors,” IEEE Access, Vol. 10, 2022.
+— Modern extension of your project into IoT-based real-world deployment.
+
 Learning OpenCV 4: Computer Vision with Python and OpenCV Library
 By Adrian Kaehler & Gary Bradski (O’Reilly, 2020)
 — The definitive guide to OpenCV and background subtraction techniques.
@@ -184,3 +190,4 @@ By Rafael C. Gonzalez & Richard E. Woods (Pearson, 4th Ed., 2018)
 Embedded Systems: Real-Time Interfacing to the MSP432 Microcontroller
 By Jonathan W. Valvano (2017)
 — Applies well to timing, stability buffers, and serial protocol design.
+

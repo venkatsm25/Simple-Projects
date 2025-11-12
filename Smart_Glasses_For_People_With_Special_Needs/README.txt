@@ -144,6 +144,36 @@ The MookMitra platform is designed for growth. The software architecture allows 
 
 In conclusion, MookMitra is more than just a technological device; it is a catalyst for social change, aiming to give a voice to the voiceless and create a more equitable and accessible India.
 
-
-
 content enhanced using Google Gemini 2.5Pro
+
+
+Refernces:
+Papatsimouli, M., Kollias, K. F., Lazaridis, L., Maraslidis, G., Michailidis, H., & Sarigiannidis, P. (2022). Real-Time Sign Language Translation Systems: A review study. 2022 11th International Conference on Modern Circuits and Systems Technologies (MOCAST). DOI:10.1109/MOCAST54814.2022.9837666. 
+ResearchGate
+
+Damdoo, R. (2025). An integrative survey on Indian Sign Language recognition and interpretation. IET Image Processing. 
+IET Research Journals
+
+Joshi, A., et al. (2023). ISLTranslate: Dataset for Translating Indian Sign Language. Findings of ACL. 
+ACL Anthology
+
+Vashisth, H.K., Tarafder, T., Aziz, R., Arora, M., & Alpana. (2023). Hand Gesture Recognition in Indian Sign Language Using Deep Learning. Engineering Proceedings, 59(1):96. DOI:10.3390/engproc2023059096. 
+MDPI
+
+Patil, R. (2021). Indian Sign Language Recognition using Convolutional Neural Networks. ITM Conferences, ICACC 2021. 
+ITM Conferences
+
+Katoch, S., et al. (2022). Indian Sign Language Recognition using SURF with Bag of Visual Words Model. (Alphabet & digits recognition) Elsevier publication. 
+ScienceDirect
+
+Shetty, S. (2024). A Real-Time Indian Sign Language Translator with PoseNet Algorithms. ScienceDirect article. 
+ScienceDirect
+
+Liang, Z. (2023). Sign Language Translation: A Survey of Approaches and Future Directions. Electronics, 12(12):2678. 
+MDPI
+
+IJISAE. (2024). Translation of Indian Sign Language to Text-A Review. (International Journal of …) 
+IJISAE
+
+Jain, S. (2015). Indian Sign Language Character Recognition. Report, IIT Kharagpur.
+cse.iitk.ac.in

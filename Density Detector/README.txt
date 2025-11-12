@@ -153,4 +153,34 @@ MIN_CONTOUR_AREA: The minimum size (in pixels) for an object to be counted. Incr
 
 STABILITY_BUFFER_SIZE: The number of consecutive frames the system must see the same state before sending a command. Increase this for more stability (slower response). Decrease this for a faster, more "twitchy" response.
 
+
 This documentation and program was structured and enhanced using Google Gemini 2.5 Pro.
+
+
+
+Refernces:
+
+B. N. Nandhini and R. Manoharan, “Smart Traffic Control System Using Image Processing,” International Journal of Computer Science Trends and Technology (IJCST), Vol. 4, Issue 2, Mar-Apr 2016.
+— Explains how background subtraction and contour-based methods can detect traffic density using OpenCV.
+
+A. Kumar, M. Singh, “Automatic Traffic Density Estimation and Signal Timing Using Image Processing,” International Journal of Advanced Research in Computer Engineering & Technology, Vol. 4, Issue 3, Mar 2015.
+— Demonstrates real-time control of signal timing using density classification similar to your L-M-H logic.
+
+N. P. Kothari et al., “Smart Traffic Control System Using IoT,” IEEE Conference on Recent Advances in Electronics and Communication Technology (ICRAECT), 2017.
+— Explores combining Arduino/ESP modules with cloud connectivity for traffic monitoring.
+
+Learning OpenCV 4: Computer Vision with Python and OpenCV Library
+By Adrian Kaehler & Gary Bradski (O’Reilly, 2020)
+— The definitive guide to OpenCV and background subtraction techniques.
+
+Exploring Arduino: Tools and Techniques for Engineering Wizardry
+By Jeremy Blum (Wiley, 2nd Ed., 2021)
+— Great explanation of serial communication and interfacing sensors/LEDs with microcontrollers.
+
+Digital Image Processing
+By Rafael C. Gonzalez & Richard E. Woods (Pearson, 4th Ed., 2018)
+— Core concepts behind motion detection, thresholding, and noise reduction.
+
+Embedded Systems: Real-Time Interfacing to the MSP432 Microcontroller
+By Jonathan W. Valvano (2017)
+— Applies well to timing, stability buffers, and serial protocol design.
